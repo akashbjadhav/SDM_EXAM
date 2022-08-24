@@ -1,0 +1,201 @@
+PRN-220343420006
+
+Q1-->calculator.java
+
+package lab_sdm;
+
+import java.io.*;
+import java.lang.*;
+import java.lang.Math;
+import java.util.Scanner;
+public class BasicCalculator {
+  
+    public static void main(String[] args)
+    {
+        // stores two numbers
+        double num1, num2;
+  
+        // Take input from the user
+        Scanner sc = new Scanner(System.in);
+  
+        System.out.println("Enter the numbers");
+  
+        // take the inputs
+        num1 = sc.nextDouble();
+  
+        num2 = sc.nextDouble();
+  
+        System.out.println("Enter the operator (+,-,*,/)");
+  
+        char op = sc.next().charAt(0);
+  
+        double o = 0;
+  
+        switch (op) {
+  
+        // case to add two numbers
+        case '+':
+  
+            o = num1 + num2;
+  
+            break;
+  
+        // case to subtract two numbers
+        case '-':
+  
+            o = num1 - num2;
+  
+            break;
+  
+        // case to multiply two numbers
+        case '*':
+  
+            o = num1 * num2;
+  
+            break;
+  
+        // case to divide two numbers
+        case '/':
+  
+            o = num1 / num2;
+  
+            break;
+	case '%':
+	     		
+	     o=((num1+num2)/2);
+  
+        default:
+  
+            System.out.println("You enter wrong input");
+  
+            break;
+        }
+  
+        System.out.println("The final result:");
+  
+        System.out.println();
+  
+        // print the final result
+        System.out.println(num1 + " " + op + " " + num2
+                           + " = " + o);
+    }
+}
+
+
+Q2-->
+ 
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ cd calculator.java
+bash: cd: calculator.java: Not a directory
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ git add calculator.java
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ git init
+Reinitialized existing Git repository in G:/sdm_lab/.git/
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   calculator.java
+
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ git commit -m"done commit"
+[master (root-commit) 95dc6d2] done commit
+ 1 file changed, 78 insertions(+)
+ create mode 100644 calculator.java
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ git log
+commit 95dc6d23279a674f14c824a720afd9327db3fb57 (HEAD -> master)
+Author: akashbjadhav <jadhavakash538@gmail.com>
+Date:   Wed Aug 24 13:28:09 2022 +0530
+
+    done commit
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ git add remote add origin https://github.com/akashbjadhav/SDM_EXAM.git
+fatal: pathspec 'remote' did not match any files
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ git add remote add origin https://github.com/akashbjadhav/SDM_EXAM.git
+fatal: pathspec 'remote' did not match any files
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ git remote add origin https://github.com/akashbjadhav/SDM_EXAM.git
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (master)
+$ git branch -M main
+
+admin@DESKTOP-K2UHJ8H MINGW32 /g/sdm_lab (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 713 bytes | 356.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/akashbjadhav/SDM_EXAM.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+
+
+
+Q.3-->  
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+public class TestMain {
+@Test
+public void testInputIsvalid(){
+assertTrue(calculator.num1,calculator.num2); //
+Assertion
+}
+}
+
+check cases:
+
+1.  assertTrue(22,45);
+2.  assertTrue(-33,65);
+
+Q.4-->
+
+$ git init
+
+$ git add calculator.java
+
+$ git commit -m "Added calculator"
+
+$ git remote add origin https://github.com/akashbjadhav/SDM_EXAM.git
+
+$ git remote -v
+
+$ git push origin main
+
+
+Q.5-->
+
+$ docker image build -t jenkins-docker
+
+/var/run/docker.sock:/var/run/docker.sock --restart unless-
+stopped jenkins-docker
+
+-v /var/run/docker.sock:/var/run/docker.sock
+
+-v jenkins_home:/var/jenkins_home 
+
+--restart unless-stopped 
+
+the docker stop
+
+&lt;jenkins_home/8000&gt
+
+
